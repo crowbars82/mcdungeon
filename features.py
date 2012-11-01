@@ -64,7 +64,7 @@ class Entrance(Blank):
                                 Vec(4,0,4),
                                 self.height*2-8):           #self.height*2+2): [cb82] attempt to stop stairs before bottom
             self.parent.parent.setblock(start.trans(p.x,
-                                                    floor(float(p.y-8)/2.0),  #floor(float(p.y)/2.0), [cb82] I know very little maths
+                                                    floor(float(p.y-8)/2.0),  #floor(float(p.y)/2.0), [cb82]
                                                     p.z),
                                         mat, mat.data+(p.y%2)*8)
         # Signs
@@ -195,7 +195,7 @@ class Columns(Blank):
         materials.NetherBrick,
         materials.NetherBrickFence,
         materials.Glowstone,
-        materials.EmeraldBlock, #[cb82] 
+        materials.EmeraldBlock, #[cb82]
         materials.LapisBlock    #[cb82]
     )
 
@@ -484,13 +484,13 @@ class SecretRoom(Blank):
 
             # Desk
             mats = [
-                (materials.BrewingStand,0), # 0 (materials.Air,0),   # 0 #[cb82]
-                (materials.WoodenStairs,7), # 1
-                (materials.Chest,0),        # 2
-                (materials.EnchantmentTable,0),# 3 (materials.CraftingTable,0),# 3 [cb82]
-                (materials.WallSign,0),     # 4
-                (materials.WoodenStairs,0), # 5
-                (materials.WoodenStairs,6)  # 6
+                (materials.BrewingStandBlock,0),    # 0 (materials.Air,0),   # 0 #[cb82]
+                (materials.WoodenStairs,7),         # 1
+                (materials.Chest,0),                # 2
+                (materials.EnchantmentTable,0),     # 3 (materials.CraftingTable,0),# 3 [cb82]
+                (materials.WallSign,0),             # 4
+                (materials.WoodenStairs,0),         # 5
+                (materials.WoodenStairs,6)          # 6
             ]
             template = [
                 [3,1,6,2],
@@ -519,7 +519,7 @@ class SecretRoom(Blank):
                              (items.byName('feather'), 0.9, 10),
                              (items.byName('leather'), 0.4, 5),
                              (items.byName('apple'), 0.2, 1),
-                             (items.byName('nether wart'), 0.5, 1),     #[cb82] to make nightvision potions if torches run out
+                             (items.byName('nether wart'), 0.5, 1),     #[cb82]
                              (items.byName('golden carrot'), 0.5, 1)]   #[cb82]
             # Generate desk loot and place chest
             deskloot = []
@@ -542,7 +542,7 @@ class SecretRoom(Blank):
             sb(o+Vec(3,3,6), materials.SandstoneSlab)
             sb(o+Vec(8,3,4), materials.SandstoneSlab)
             sb(o+Vec(8,3,6), materials.SandstoneSlab)
-            sb(o+Vec(4,2,5), materials.BirchSlab)  #sb(o+Vec(4,2,5), materials.StoneBrick) [cb82] to make burnable when player has only a sword... a fun thing to do, sorta, but yeah
+            sb(o+Vec(4,2,5), materials.BirchSlab)  #sb(o+Vec(4,2,5), materials.StoneBrick) [cb82]
             sb(o+Vec(5,2,5), materials.BirchSlab)  #sb(o+Vec(5,2,5), materials.StoneBrickSlab) [cb82]
             sb(o+Vec(6,2,5), materials.BirchStairs) #sb(o+Vec(6,2,5), materials.StoneBrickSlab) [cb82]
             sb(o+Vec(7,2,5), materials.StoneBrickStairs, 0) #sb(o+Vec(7,2,5), materials.StoneBrickStairs, 0) [cb82]
